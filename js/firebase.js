@@ -1,24 +1,23 @@
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAk15eZoNwGaX1YsXeXq33kALfm-sgBx8A",
-    authDomain: "sirajul-ummah-academy.firebaseapp.com",
-    projectId: "sirajul-ummah-academy",
-    storageBucket: "sirajul-ummah-academy.firebasestorage.app",
-    messagingSenderId: "767042103810",
-    appId: "1:767042103810:web:881e896d8b7bf78a9b951b",
-    measurementId: "G-6CXV9C8SWY"
-  };
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "sirajul-ummah-academy.firebaseapp.com",
+  projectId: "sirajul-ummah-academy",
+  storageBucket: "sirajul-ummah-academy.firebasestorage.app",
+  messagingSenderId: "767042103810",
+  appId: "1:767042103810:web:881e896d8b7bf78a9b951b"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+const db = getFirestore(app);
+
+export { auth, db };
