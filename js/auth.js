@@ -38,6 +38,19 @@ password
 await updateProfile(userCredential.user,{
 displayName:name
 });
+  await setDoc(doc(db,"users",userCredential.user.uid),{
+
+name:name,
+
+email:email,
+
+coins:0,
+
+role:"student",
+
+createdAt:new Date()
+
+});
 
 alert("Account created successfully!");
 
