@@ -6,7 +6,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey:  "AIzaSyAk15eZoNWGaX1YsXeXq33kALfm-sgBx8A", 
   authDomain: "sirajul-ummah-academy.firebaseapp.com",
   projectId: "sirajul-ummah-academy",
   storageBucket: "sirajul-ummah-academy.firebasestorage.app",
